@@ -82,3 +82,27 @@ module.exports.destroyListing = async (req, res) => {
     res.redirect("/listings");
 };
 
+module.exports.search = async (req, res) => {
+    console.log(req.query.q);
+    let input = req.query.q.trim().replace(/\s+/g, " "); // remove start and end space
+    console.log(input);
+    if(input == "" || input == " ") {
+        //search value empty
+        req.flash("error", "Search value empty !!!");
+        res.redirect("/listings");
+    }
+    //convert every word 1st letter capital and other small
+    let data = input.split("");
+    let element = "";
+    let flag = false;
+    for(let index = 0; index < data.length; index++) {
+        if(index == 0 || flag) {
+            element = element + data[index].toUpperCase();
+        } else {
+            element = element + data[index].toLowerCase();
+        }
+        flag = data[index] == " ";
+    }
+    console.log(element);
+}
+
