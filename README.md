@@ -6,13 +6,13 @@ Welcome to the full-stack Airbnb clone project. This application allows users to
 
 ## Tech Stack
 
-Frontend: HTML, CSS, JavaScript,Bootstrap
+**Frontend:** HTML, CSS, JavaScript,Bootstrap
 
-Backend: Node.js, Express.js
+**Backend:** Node.js, Express.js
 
-Database: MongoDB
+**Database:** MongoDB
 
-Hosting: Render.com
+**Hosting:** Render.com
 
 
 ## API Reference
